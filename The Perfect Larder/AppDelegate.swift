@@ -8,13 +8,21 @@
 
 import UIKit
 
+//MARK: - Storyboard references.
+///The main storyboard.
+let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+///The login storyboard.
+let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+
+//MARK: - App Delegate.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        self.window?.rootViewController = loginStoryboard.instantiateInitialViewController()
         // Override point for customization after application launch.
         return true
     }
@@ -44,3 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//MARK: - Extensions:
+//`UIColor`
+extension UIColor {
+    static let theme = UIColor(named: "themeColor") ?? .orange
+}
