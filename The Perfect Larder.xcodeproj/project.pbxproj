@@ -16,6 +16,7 @@
 		B82A58A3228D8C6E0046B682 /* The_Perfect_LarderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A58A2228D8C6E0046B682 /* The_Perfect_LarderUITests.swift */; };
 		B82A58B2228EE7020046B682 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82A58B1228EE7020046B682 /* Login.storyboard */; };
 		B82A58B4228EE71B0046B682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A58B3228EE71B0046B682 /* LoginViewController.swift */; };
+		B82A58B8228EF3F60046B682 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A58B7228EF3F60046B682 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B82A58A4228D8C6E0046B682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B82A58B1228EE7020046B682 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B82A58B3228EE71B0046B682 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B82A58B7228EF3F60046B682 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				B82A5882228D8C6D0046B682 /* AppDelegate.swift */,
 				B82A5884228D8C6D0046B682 /* ViewController.swift */,
 				B82A5886228D8C6D0046B682 /* Main.storyboard */,
+				B82A58B7228EF3F60046B682 /* UIViewExtensions.swift */,
 				B82A58B0228EE6C70046B682 /* Login */,
 				B82A5889228D8C6E0046B682 /* Assets.xcassets */,
 				B82A588B228D8C6E0046B682 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 			files = (
 				B82A58B4228EE71B0046B682 /* LoginViewController.swift in Sources */,
 				B82A5885228D8C6D0046B682 /* ViewController.swift in Sources */,
+				B82A58B8228EF3F60046B682 /* UIViewExtensions.swift in Sources */,
 				B82A5883228D8C6D0046B682 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

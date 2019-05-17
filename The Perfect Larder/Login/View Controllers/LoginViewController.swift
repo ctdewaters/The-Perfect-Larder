@@ -15,12 +15,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
     
-
     //MARK: - `UIViewController` overrides.
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         //Setup views.
         self.setup()
     }
@@ -31,22 +36,33 @@ class LoginViewController: UIViewController {
             subview.resignFirstResponder()
         }
     }
+    
+    override var disablesAutomaticKeyboardDismissal: Bool {
+        return false
+    }
 
     //MARK: - Setup.
     ///Sets up the view, and its visual components.
     func setup() {
+        //Parallax effect constants.
+        let foregroundParallaxConstant: CGFloat = 15.0
+        let backgroundParallaxConstant: CGFloat = 45.0
+        
         //Text fields.
         for subview in self.view.subviews {
             if let textField = subview as? UITextField {
                 textField.textColor = .theme
                 textField.layer.cornerRadius = 20
                 textField.layer.sublayerTransform = CATransform3DMakeTranslation(16, 0, 0)
+                textField.addParallaxEffect(withMovementConstant: foregroundParallaxConstant)
             }
             if let button = subview as? UIButton {
                 button.layer.cornerRadius = 35 / 2
             }
         }
         
+        self.logoImage.addParallaxEffect(withMovementConstant: foregroundParallaxConstant)
+        self.backgroundImage.addParallaxEffect(withMovementConstant: backgroundParallaxConstant)
     }
 
 }
